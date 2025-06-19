@@ -1,0 +1,72 @@
+.notif-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1050;
+  display: flex;
+}
+
+.notif-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.4);
+  pointer-events: auto;
+}
+
+.notif-overlay.open ~ * {
+  pointer-events: none;
+}
+
+.notif-panel {
+  position: relative;
+  margin-left: var(--sidebar-width,245px); /* align to sidebar */
+  width: 320px;
+  max-width: 90vw;
+  height: 100vh;
+  background: var(--bg-primary);
+  box-shadow: -4px 0 20px rgba(0,0,0,.45);
+  overflow-y: auto;
+  animation: slideInFromLeft 0.3s ease;
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@media(max-width:1264px) {
+  .notif-panel {
+    margin-left: 72px;
+  }
+}
+
+@media(max-width:768px) {
+  .notif-panel {
+    margin-left: 0;
+    width: min(320px, 85vw);
+  }
+}
+
+.notif-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-size: 20px;
+  padding: 8px 16px 8px 8px;
+  transition: all 0.2s ease;
+}
+
+.notif-close:hover {
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+}

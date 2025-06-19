@@ -1,0 +1,222 @@
+.notifications-page {
+  width: 100%;
+  min-height: calc(100vh - 64px);
+  padding: var(--spacing-lg);
+  display: flex;
+  justify-content: center;
+}
+
+.notifications-container {
+  width: 100%;
+  max-width: 860px;
+  background: var(--secondary-bg);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,.25);
+}
+
+.notifications-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-lg);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.header-left h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.unread-badge {
+  background: var(--accent-color);
+  color: var(--bg-primary);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius-full);
+  min-width: 1.5rem;
+  text-align: center;
+}
+
+.header-actions {
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+.mark-all-btn,
+.clear-all-btn {
+  background: none;
+  border: none;
+  color: var(--accent-color);
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.mark-all-btn:hover,
+.clear-all-btn:hover {
+  background: rgba(51, 189, 148, 0.1);
+}
+
+.notifications-list {
+  padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.notification-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  background: var(--bg-primary);
+  transition: all var(--transition-fast);
+  box-shadow: 0 2px 4px rgba(0,0,0,.25);
+}
+
+.notification-item.unread {
+  background: rgba(51, 189, 148, 0.05);
+  border-left: 3px solid var(--accent-color);
+}
+
+.notification-content {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  flex: 1;
+}
+
+.notification-icon {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: var(--text-primary);
+  background: var(--accent-color);
+}
+
+.notification-icon.follow {
+  background: #7c5cff;
+}
+
+.notification-icon.like {
+  background: #ff4d4d;
+}
+
+.notification-icon.comment {
+  background: #33a1ff;
+}
+
+.notification-text {
+  flex: 1;
+}
+
+.notification-text p {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.notification-time {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-top: 0.25rem;
+  display: block;
+}
+
+.notification-actions {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.mark-read-btn,
+.remove-btn {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  padding: var(--spacing-xs);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mark-read-btn:hover {
+  color: var(--accent-color);
+  background: rgba(51, 189, 148, 0.1);
+}
+
+.remove-btn:hover {
+  color: #ff4d4d;
+  background: rgba(255, 77, 77, 0.1);
+}
+
+.no-notifications {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-xl) var(--spacing-lg);
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+.empty-icon {
+  font-size: 3rem;
+  margin-bottom: var(--spacing-md);
+  opacity: 0.5;
+}
+
+.no-notifications h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 0 var(--spacing-xs);
+  color: var(--text-primary);
+}
+
+.no-notifications p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .notifications-page {
+    padding: var(--spacing-md);
+  }
+
+  .notifications-container {
+    border-radius: 0;
+  }
+
+  .notifications-header {
+    padding: var(--spacing-md);
+  }
+
+  .header-left h1 {
+    font-size: 1.25rem;
+  }
+
+  .notifications-list {
+    padding: var(--spacing-md);
+  }
+} 

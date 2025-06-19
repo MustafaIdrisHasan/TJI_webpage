@@ -1,0 +1,355 @@
+.enhanced-profile-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0;
+  color: var(--text-primary);
+}
+
+.profile-cover {
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 80px;
+}
+
+.cover-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-details {
+  position: relative;
+  margin: 0 1rem 1.5rem;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.profile-avatar-container {
+  position: absolute;
+  top: -60px;
+  left: 1rem;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid var(--secondary-bg);
+  overflow: hidden;
+}
+
+.profile-avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.user-info {
+  margin-top: 70px;
+  margin-left: 0.5rem;
+}
+
+.user-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.user-header h1 {
+  font-size: 1.6rem;
+  margin: 0;
+  font-weight: 600;
+}
+
+.edit-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--secondary-bg);
+  color: var(--accent-color);
+  border: none;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.edit-btn:hover {
+  background: var(--accent-color);
+  color: var(--text-primary);
+}
+
+.user-title {
+  color: var(--accent-color);
+  margin: 0 0 0.2rem;
+  font-size: 1.1rem;
+}
+
+.user-location {
+  color: var(--text-secondary);
+  margin: 0 0 1rem;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.profile-actions {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.connect-btn, .message-btn, .more-btn {
+  padding: 0.6rem 1.2rem;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.connect-btn {
+  background: var(--accent-color);
+  color: var(--text-primary);
+  border: none;
+}
+
+.message-btn {
+  background: transparent;
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+}
+
+.more-btn {
+  background: transparent;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+}
+
+.about-section, .profile-stats, .skills-section, 
+.experience-section, .education-section, .social-stats {
+  margin: 0 1rem 1.5rem;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.section-header h2 {
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.add-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-btn:hover {
+  color: var(--accent-color);
+}
+
+.about-section p {
+  line-height: 1.5;
+  margin: 0;
+}
+
+.profile-stats {
+  display: flex;
+  justify-content: space-around;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.stat-icon {
+  color: var(--accent-color);
+  font-size: 1.3rem;
+}
+
+.stat-value {
+  color: var(--text-primary);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.stat-label {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.skill-tag {
+  padding: 0.6rem 1.2rem;
+  background: var(--secondary-bg);
+  color: var(--text-primary);
+  border-radius: 15px;
+  font-size: 0.9rem;
+  box-shadow: 
+    2px 2px 5px var(--shadow-dark),
+    -1px -1px 3px var(--shadow-light);
+}
+
+.experience-list, .education-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.experience-item, .education-item {
+  display: flex;
+  gap: 1rem;
+}
+
+.company-logo, .school-logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--secondary-bg);
+  flex-shrink: 0;
+}
+
+.company-logo img, .school-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.experience-details, .education-details {
+  flex: 1;
+}
+
+.experience-details h3, .education-details h3 {
+  margin: 0 0 0.3rem;
+  font-size: 1.1rem;
+}
+
+.company-name, .degree {
+  margin: 0 0 0.3rem;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+}
+
+.experience-duration, .education-duration {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  margin: 0 0 0.5rem;
+}
+
+.experience-description {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.social-stats-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.social-stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.social-stat-value {
+  color: var(--text-primary);
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.social-stat-label {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.8rem;
+}
+
+.post-item {
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.post-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 600px) {
+  .profile-cover {
+    height: 150px;
+    margin-bottom: 60px;
+  }
+
+  .profile-avatar-container {
+    width: 100px;
+    height: 100px;
+    top: -50px;
+  }
+
+  .user-info {
+    margin-top: 60px;
+  }
+
+  .user-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .user-header h1 {
+    font-size: 1.4rem;
+  }
+
+  .about-section, .profile-stats, .skills-section, 
+  .experience-section, .education-section, .social-stats {
+    padding: 1rem;
+  }
+
+  .section-header h2 {
+    font-size: 1.1rem;
+  }
+
+  .experience-item, .education-item {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .company-logo, .school-logo {
+    width: 40px;
+    height: 40px;
+  }
+} 

@@ -1,0 +1,52 @@
+:root{
+  --neu-radius: 18px;
+  --neu-light: rgba(255,255,255,0.04);
+  --neu-dark : rgba(0,0,0,0.45);
+}
+
+/* utility */
+.neu{
+  border-radius: var(--neu-radius);
+  background: var(--secondary-bg);
+  box-shadow:
+    4px 4px 8px var(--neu-dark),
+    -4px -4px 8px var(--neu-light);
+}
+
+/* Search shell styling */
+.search-shell{
+  display:flex;align-items:center;gap:.75rem;
+  width:min(460px,40vw);padding:0.55rem 1.1rem;
+}
+
+.search-input{
+  flex:1;background:transparent;border:none;
+  color:var(--text-primary);font-size:1rem;outline:none;
+}
+
+.search-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Scrollbar polish */
+::-webkit-scrollbar{width:8px;}
+::-webkit-scrollbar-thumb{
+  background:var(--neu-dark);
+  border-radius:9999px;
+}
+::-webkit-scrollbar-track{
+  background: var(--background);
+  border-radius:9999px;
+}
+
+/* Avatar consistency */
+.avatar-border{
+  box-shadow:0 0 0 2px var(--accent-color);
+  border-radius:50%;
+}
+
+/* Tab & Button sizing */
+.tab-btn, .primary-btn{
+  padding:1.05rem 1.25rem;
+  font-size:1rem;
+} 
